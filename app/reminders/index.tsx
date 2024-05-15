@@ -19,11 +19,11 @@ export default function ReminderPage() {
 	return (
 		<ScrollView
 			contentContainerStyle={{
-				flex: 1,
+				// flex: 1,
 				justifyContent: 'center',
 				alignItems: 'center',
 			}}
-			className='w-full bg-white'
+			className='w-full h-full bg-white'
 		>
 			<View className='w-full h-full px-4 py-2 md:w-4/5 lg:w-3/5'>
 				<View className=''>
