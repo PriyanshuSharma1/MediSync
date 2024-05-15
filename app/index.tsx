@@ -1,11 +1,4 @@
-import {
-	View,
-	Text,
-	Pressable,
-	FlatList,
-	ScrollView,
-	Platform,
-} from 'react-native';
+import { View, Text, Pressable, FlatList, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import Checkbox from 'expo-checkbox';
@@ -72,7 +65,6 @@ export default function HomePage() {
 				flexGrow: 1,
 				justifyContent: 'space-between',
 				alignItems: 'center',
-				paddingBottom: Platform.OS === 'web' ? 0 : 20,
 			}}
 			className='w-full h-full bg-gray-100 '
 		>
@@ -91,11 +83,11 @@ export default function HomePage() {
 				</View>
 			</View>
 			{/* 4/5 container in the web */}
-			<View className='w-full h-full px-4 md:w-4/5 lg:w-3/5'>
+			<View className='w-full px-4 md:w-4/5 lg:w-3/5'>
 				{/* daily view of the week  */}
 				<View>
 					{/* week view title */}
-					<View className='flex flex-row items-center py-4'>
+					<View className='flex flex-row items-center mt-6 mb-3'>
 						<View className='mr-2'>
 							<Ionicons name='calendar-outline' size={24} />
 						</View>
@@ -131,7 +123,7 @@ export default function HomePage() {
 					</View>
 				</View>
 				{/* list of medication and time */}
-				<View className='flex flex-row items-center py-4'>
+				<View className='flex flex-row items-center mt-6 mb-3'>
 					<View className='mr-2'>
 						<Ionicons name='bandage-outline' size={24} />
 					</View>
@@ -139,6 +131,7 @@ export default function HomePage() {
 				</View>
 				{/* medicine list */}
 				<FlatList
+					className='pb-12 web:p-0'
 					data={medicineList}
 					renderItem={({ item }) => <List data={item} key={item.name} />}
 				/>
