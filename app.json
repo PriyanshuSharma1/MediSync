@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "lifeline",
-		"slug": "lifeline-app",
+		"name": "medisync",
+		"slug": "medisync-app",
 		"scheme": "expo-app",
 		"version": "1.0.0",
 		"orientation": "portrait",
@@ -17,7 +17,7 @@
 			"supportsTablet": true
 		},
 		"android": {
-			"package": "com.theidealism.lifeline",
+			"package": "com.medisync.app",
 			"versionCode": 2,
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/AppLogo.png",
@@ -33,9 +33,6 @@
 		"extra": {
 			"router": {
 				"origin": false
-			},
-			"eas": {
-				"projectId": "75d62be8-dd7d-42c6-9552-346a5cee15d7"
 			}
 		}
 	}
