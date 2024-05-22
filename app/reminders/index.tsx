@@ -27,7 +27,9 @@ export default function ReminderPage() {
 		>
 			<View className='w-full h-full px-4 py-2 md:w-4/5 lg:w-3/5'>
 				<View className=''>
-					<Text className='text-xl font-semibold'>Upcoming Reminders</Text>
+					<Text className='text-xl font-semibold' role='heading' aria-level='2'>
+						Upcoming Reminders
+					</Text>
 				</View>
 				{/* list reminder  */}
 				<View className='p-2'>
