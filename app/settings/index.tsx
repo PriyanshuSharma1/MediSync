@@ -185,15 +185,15 @@ export default function SettingsPage() {
 						</View>
 					</View>
 					{/* bottom sheet */}
-					<View className='' style={styles.container}>
+					<View style={styles.container}>
 						<BottomSheet
 							snapPoints={['50%', '60%', '70%']}
 							ref={bottomSheetRef}
 							onChange={handleSheetChanges}
 						>
-							<BottomSheetView style={styles.contentContainer}>
+							<View>
 								<Text>Awesome 🎉</Text>
-							</BottomSheetView>
+							</View>
 						</BottomSheet>
 					</View>
 				</View>
