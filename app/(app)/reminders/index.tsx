@@ -1,12 +1,5 @@
-import {
-	View,
-	Text,
-	ScrollView,
-	FlatList,
-	Button,
-	Pressable,
-} from 'react-native';
-import List from '../../components/List';
+import { View, Text, ScrollView, FlatList, Pressable } from 'react-native';
+import List from '@/components/List';
 
 const reminders = [
 	{
@@ -33,7 +26,7 @@ export default function ReminderPage() {
 			}}
 			className='w-full h-full bg-white'
 		>
-			<View className='w-full h-full px-4 py-2  md:w-4/5 lg:w-3/5'>
+			<View className='w-full h-full px-4 py-2 md:w-4/5 lg:w-3/5'>
 				<View className=''>
 					<Text className='text-xl font-semibold' role='heading' aria-level='2'>
 						Upcoming Reminders
@@ -46,10 +39,10 @@ export default function ReminderPage() {
 						renderItem={({ item }) => <List data={item} key={item.name} />}
 					/>
 					<Pressable
-						className='w-full p-3 text-center text-white bg-yellow-500 rounded-md shadow-md'
+						className='w-full p-3 text-white bg-blue-400 rounded-md shadow-md'
 						onPress={() => console.log('Add Reminder')}
 					>
-						Add reminder
+						<Text className='text-center text-white'>Add reminder</Text>
 					</Pressable>
 				</View>
 			</View>

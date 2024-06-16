@@ -1,54 +1,11 @@
-import { NativeWindStyleSheet } from 'nativewind';
-import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import { SessionProvider } from '@/contexts/SessionContext';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Slot } from 'expo-router';
 
-NativeWindStyleSheet.setOutput({
-	default: 'native',
-});
-
-export default function HomeLayout() {
+export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<BottomSheetModalProvider>
-			<Tabs>
-				<Tabs.Screen
-					name='index'
-					options={{
-						title: 'Home',
-						tabBarIcon: ({ color }) => (
-							<Ionicons name='home-outline' size={16} color={color} />
-						),
-						headerShown: false,
-					}}
-				/>
-				<Tabs.Screen
-					name='reminders/index'
-					options={{
-						title: 'Reminders',
-						tabBarIcon: ({ color }) => (
-							<Ionicons name='alarm-outline' size={16} color={color} />
-						),
-					}}
-				/>
-				<Tabs.Screen
-					name='report/index'
-					options={{
-						title: 'Report',
-						tabBarIcon: ({ color }) => (
-							<Ionicons name='analytics-outline' size={16} color={color} />
-						),
-					}}
-				/>
-				<Tabs.Screen
-					name='settings/index'
-					options={{
-						title: 'Settings',
-						tabBarIcon: ({ color }) => (
-							<Ionicons name='settings-outline' size={16} color={color} />
-						),
-					}}
-				/>
-			</Tabs>
-		</BottomSheetModalProvider>
+		<SessionProvider>
+			<Slot />
+		</SessionProvider>
 	);
 }

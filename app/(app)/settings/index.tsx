@@ -4,7 +4,7 @@ import { useState, useRef, useCallback } from 'react';
 import RadioButtonGroup, { RadioButtonItem } from 'expo-radio-button';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
+import BottomSheet from '@gorhom/bottom-sheet';
 
 const styles = StyleSheet.create({
 	container: {
